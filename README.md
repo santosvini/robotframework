@@ -23,6 +23,7 @@ $ python -m pip --version
 
 Doc utilizada para o andamento do curso, utilizando as keywords
 
+https://robotframework.org/ <br>
 https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
 
 #### :computer: By Vini Santos :keyboard:
