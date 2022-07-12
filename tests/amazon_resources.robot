@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 Library    Screenshot
 
 *** Variables ***
-${url}                https://www.amazon.com.br
+${url}                https://www.amazon.com.br/
 ${browser}            chrome
 ${menu_eletronico}    //a[contains(@href,'electronics')]
 ${title_eletronico}   //h1[contains(.,'Eletrônicos e Tecnologia')]
@@ -22,6 +22,8 @@ Verificar se aparece a frase "${frase}"
     Wait Until Element Is Visible    locator=${title_eletronico}
 Verificar se o título da página fica "${titulo}"
     Title Should Be    title=${titulo}
+Verificar se aparece a categoria "${nome_categoria}"
+    Element Should Be Visible     locator=//a[@aria-label='${nome_categoria}']
 Fechar o navegador
     Capture Page Screenshot
     Close Browser
