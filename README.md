@@ -26,4 +26,14 @@ Doc utilizada para o andamento do curso, utilizando as keywords
 https://robotframework.org/ <br>
 https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html
 
+## Execute
+
+### Rodando todos os casos de testes em formato gherkin
+```$ robot -d ../log amazon_testes_gherkin_bdd.robot```
+
+### Rodando com tags
+```robot -d ../log -i [tag_aqui] arquivo.robot```
+
+O comando com (-d) passa para dentro da pasta log, todos os logs, screenshots e reports
+
 #### :computer: By Vini Santos :keyboard:
