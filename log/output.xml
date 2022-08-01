@@ -1,209 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220724 00:00:26.582" rpa="false" schemaversion="3">
-<suite id="s1" name="Amazon Testes Gherkin Bdd" source="C:\robotframework\tests\amazon_testes_gherkin_bdd.robot">
-<test id="s1-t1" name="Caso de teste 03 - Adicionar produto ao carrinho" line="27">
-<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>${browser}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220724 00:00:27.041" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
-<status status="PASS" starttime="20220724 00:00:27.041" endtime="20220724 00:00:33.408"/>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220728 18:48:54.380" rpa="false" schemaversion="3">
+<suite id="s1" name="Laços" source="C:\robotframework\tests\laços.robot">
+<test id="s1-t1" name="Teste de lista de numeros" line="8">
+<kw name="Imprimir somente se for 5 e 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 18:48:54.453" endtime="20220728 18:48:54.453"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220724 00:00:33.409" endtime="20220724 00:00:34.059"/>
+<for flavor="IN">
+<var>${numero}</var>
+<value>@{numeros}</value>
+<iter>
+<var name="${numero}">0</var>
+<if>
+<branch type="IF" condition="${numero} == 5 or ${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número ${numero}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220728 18:48:54.454" endtime="20220728 18:48:54.454"/>
 </kw>
-<status status="PASS" starttime="20220724 00:00:27.040" endtime="20220724 00:00:34.059"/>
+<status status="NOT RUN" starttime="20220728 18:48:54.454" endtime="20220728 18:48:54.454"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 18:48:54.454" endtime="20220728 18:48:54.454"/>
 </kw>
-<kw name="Dado que estou na home page da Amazon.com.br" library="amazon_resources">
-<kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
-<kw name="Go To" library="SeleniumLibrary">
-<arg>url=${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220724 00:00:34.067" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
-<status status="PASS" starttime="20220724 00:00:34.066" endtime="20220724 00:00:37.516"/>
+<status status="PASS" starttime="20220728 18:48:54.454" endtime="20220728 18:48:54.454"/>
+</branch>
+<status status="PASS" starttime="20220728 18:48:54.454" endtime="20220728 18:48:54.455"/>
+</if>
+<status status="PASS" starttime="20220728 18:48:54.453" endtime="20220728 18:48:54.455"/>
+</iter>
+<iter>
+<var name="${numero}">3</var>
+<if>
+<branch type="IF" condition="${numero} == 5 or ${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número ${numero}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220728 18:48:54.455" endtime="20220728 18:48:54.455"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=${menu_eletronico}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220724 00:00:37.516" endtime="20220724 00:00:37.583"/>
+<status status="NOT RUN" starttime="20220728 18:48:54.455" endtime="20220728 18:48:54.455"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 18:48:54.455" endtime="20220728 18:48:54.456"/>
 </kw>
-<status status="PASS" starttime="20220724 00:00:34.065" endtime="20220724 00:00:37.583"/>
+<status status="PASS" starttime="20220728 18:48:54.455" endtime="20220728 18:48:54.456"/>
+</branch>
+<status status="PASS" starttime="20220728 18:48:54.455" endtime="20220728 18:48:54.456"/>
+</if>
+<status status="PASS" starttime="20220728 18:48:54.455" endtime="20220728 18:48:54.456"/>
+</iter>
+<iter>
+<var name="${numero}">5</var>
+<if>
+<branch type="IF" condition="${numero} == 5 or ${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número ${numero}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 18:48:54.456" endtime="20220728 18:48:54.456"/>
 </kw>
-<kw name="Verificar se o título da página fica &quot;Amazon.com.br | Tudo pra você, de A a Z.&quot;" library="amazon_resources" sourcename="Verificar se o título da página fica &quot;${titulo}&quot;">
-<kw name="Title Should Be" library="SeleniumLibrary">
-<arg>title=${titulo}</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220724 00:00:37.592" level="INFO">Page title is 'Amazon.com.br | Tudo pra você, de A a Z.'.</msg>
-<status status="PASS" starttime="20220724 00:00:37.585" endtime="20220724 00:00:37.593"/>
+<status status="PASS" starttime="20220728 18:48:54.456" endtime="20220728 18:48:54.457"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220728 18:48:54.457" endtime="20220728 18:48:54.457"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220724 00:00:39.603" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220724 00:00:37.593" endtime="20220724 00:00:39.603"/>
+<status status="NOT RUN" starttime="20220728 18:48:54.457" endtime="20220728 18:48:54.457"/>
+</branch>
+<status status="PASS" starttime="20220728 18:48:54.456" endtime="20220728 18:48:54.458"/>
+</if>
+<status status="PASS" starttime="20220728 18:48:54.456" endtime="20220728 18:48:54.458"/>
+</iter>
+<iter>
+<var name="${numero}">7</var>
+<if>
+<branch type="IF" condition="${numero} == 5 or ${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número ${numero}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220728 18:48:54.459" endtime="20220728 18:48:54.459"/>
 </kw>
-<status status="PASS" starttime="20220724 00:00:37.584" endtime="20220724 00:00:39.603"/>
+<status status="NOT RUN" starttime="20220728 18:48:54.458" endtime="20220728 18:48:54.459"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 18:48:54.459" endtime="20220728 18:48:54.460"/>
 </kw>
-<status status="PASS" starttime="20220724 00:00:34.064" endtime="20220724 00:00:39.603"/>
+<status status="PASS" starttime="20220728 18:48:54.459" endtime="20220728 18:48:54.460"/>
+</branch>
+<status status="PASS" starttime="20220728 18:48:54.458" endtime="20220728 18:48:54.460"/>
+</if>
+<status status="PASS" starttime="20220728 18:48:54.458" endtime="20220728 18:48:54.460"/>
+</iter>
+<iter>
+<var name="${numero}">9</var>
+<if>
+<branch type="IF" condition="${numero} == 5 or ${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número ${numero}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220728 18:48:54.461" endtime="20220728 18:48:54.461"/>
 </kw>
-<kw name="Quando pesquisar pelo produto &quot;Xbox Series S&quot;" library="amazon_resources">
-<kw name="Digitar o nome de produto &quot;Xbox Series S&quot; no campo de pesquisa" library="amazon_resources" sourcename="Digitar o nome de produto &quot;${produto}&quot; no campo de pesquisa">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>locator=twotabsearchtextbox</arg>
-<arg>text=${produto}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220724 00:00:39.607" level="INFO">Typing text 'Xbox Series S' into text field 'twotabsearchtextbox'.</msg>
-<status status="PASS" starttime="20220724 00:00:39.606" endtime="20220724 00:00:39.989"/>
+<status status="NOT RUN" starttime="20220728 18:48:54.461" endtime="20220728 18:48:54.461"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 18:48:54.461" endtime="20220728 18:48:54.462"/>
 </kw>
-<status status="PASS" starttime="20220724 00:00:39.605" endtime="20220724 00:00:39.990"/>
+<status status="PASS" starttime="20220728 18:48:54.461" endtime="20220728 18:48:54.462"/>
+</branch>
+<status status="PASS" starttime="20220728 18:48:54.461" endtime="20220728 18:48:54.462"/>
+</if>
+<status status="PASS" starttime="20220728 18:48:54.461" endtime="20220728 18:48:54.462"/>
+</iter>
+<iter>
+<var name="${numero}">10</var>
+<if>
+<branch type="IF" condition="${numero} == 5 or ${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número ${numero}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 18:48:54.462" endtime="20220728 18:48:54.463"/>
 </kw>
-<kw name="Clicar no botão de pesquisa" library="amazon_resources">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=nav-search-submit-button</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220724 00:00:39.992" level="INFO">Clicking element 'nav-search-submit-button'.</msg>
-<status status="PASS" starttime="20220724 00:00:39.991" endtime="20220724 00:00:40.382"/>
+<status status="PASS" starttime="20220728 18:48:54.462" endtime="20220728 18:48:54.463"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220728 18:48:54.463" endtime="20220728 18:48:54.463"/>
 </kw>
-<status status="PASS" starttime="20220724 00:00:39.990" endtime="20220724 00:00:40.383"/>
+<status status="NOT RUN" starttime="20220728 18:48:54.463" endtime="20220728 18:48:54.463"/>
+</branch>
+<status status="PASS" starttime="20220728 18:48:54.462" endtime="20220728 18:48:54.463"/>
+</if>
+<status status="PASS" starttime="20220728 18:48:54.462" endtime="20220728 18:48:54.463"/>
+</iter>
+<iter>
+<var name="${numero}">12</var>
+<if>
+<branch type="IF" condition="${numero} == 5 or ${numero} == 10">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu sou o número ${numero}!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220728 18:48:54.464" endtime="20220728 18:48:54.464"/>
 </kw>
-<status status="PASS" starttime="20220724 00:00:39.604" endtime="20220724 00:00:40.383"/>
+<status status="NOT RUN" starttime="20220728 18:48:54.464" endtime="20220728 18:48:54.464"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Eu não sou o número 5 e nem o número 10!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220728 18:48:54.464" endtime="20220728 18:48:54.464"/>
 </kw>
-<kw name="E um produto da linha &quot;Xbox Series S&quot; deve ser mostrado na página" library="amazon_resources">
-<kw name="Verificar o resultado da pesquisa se está listando o produto &quot;Console Xbox Series S&quot;" library="amazon_resources" sourcename="Verificar o resultado da pesquisa se está listando o produto &quot;${produto}&quot;">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>locator=//img[@alt='Console Xbox Series S']</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220724 00:00:40.391" endtime="20220724 00:00:42.500"/>
+<status status="PASS" starttime="20220728 18:48:54.464" endtime="20220728 18:48:54.465"/>
+</branch>
+<status status="PASS" starttime="20220728 18:48:54.464" endtime="20220728 18:48:54.465"/>
+</if>
+<status status="PASS" starttime="20220728 18:48:54.463" endtime="20220728 18:48:54.465"/>
+</iter>
+<status status="PASS" starttime="20220728 18:48:54.453" endtime="20220728 18:48:54.465"/>
+</for>
+<status status="PASS" starttime="20220728 18:48:54.452" endtime="20220728 18:48:54.465"/>
 </kw>
-<status status="PASS" starttime="20220724 00:00:40.390" endtime="20220724 00:00:42.500"/>
-</kw>
-<status status="PASS" starttime="20220724 00:00:40.389" endtime="20220724 00:00:42.500"/>
-</kw>
-<kw name="Quando adicionar o produto &quot;Console Xbox Series S&quot; no carrinho" library="amazon_resources">
-<kw name="Adicionar o produto &quot;Console Xbox Series S&quot; no carrinho" library="amazon_resources" sourcename="Adicionar o produto &quot;${produto}&quot; no carrinho">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=//img[@alt='Console Xbox Series S']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220724 00:00:42.509" level="INFO">Clicking element '//img[@alt='Console Xbox Series S']'.</msg>
-<status status="PASS" starttime="20220724 00:00:42.508" endtime="20220724 00:00:48.347"/>
-</kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>locator=//img[@data-a-image-name='landingImage']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220724 00:00:48.447" level="INFO">Element '//img[@data-a-image-name='landingImage']' is displayed.</msg>
-<status status="PASS" starttime="20220724 00:00:48.347" endtime="20220724 00:00:48.448"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>locator=//input[@title='Adicionar ao carrinho']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220724 00:00:48.449" level="INFO">Clicking element '//input[@title='Adicionar ao carrinho']'.</msg>
-<msg timestamp="20220724 00:00:51.282" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220724 00:00:51.284" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
-from unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.134)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x006D6463+2188387]
-	Ordinal0 [0x0066E461+1762401]
-	Ordinal0 [0x00583D78+802168]
-	Ordinal0 [0x00577210+750096]
-	Ordinal0 [0x0057675A+747354]
-	Ordinal0 [0x00575D3F+744767]
-	Ordinal0 [0x00574C28+740392]
-	Ordinal0 [0x00575228+741928]
-	Ordinal0 [0x0057EF2F+782127]
-	Ordinal0 [0x00589FBB+827323]
-	Ordinal0 [0x0058D310+840464]
-	Ordinal0 [0x005754F6+742646]
-	Ordinal0 [0x00589BF3+826355]
-	Ordinal0 [0x005DCF6D+1167213]
-	Ordinal0 [0x005CC5F6+1099254]
-	Ordinal0 [0x005A6BE0+945120]
-	Ordinal0 [0x005A7AD6+948950]
-	GetHandleVerifier [0x009771F2+2712546]
-	GetHandleVerifier [0x0096886D+2652765]
-	GetHandleVerifier [0x0076002A+520730]
-	GetHandleVerifier [0x0075EE06+516086]
-	Ordinal0 [0x0067468B+1787531]
-	Ordinal0 [0x00678E88+1805960]
-	Ordinal0 [0x00678F75+1806197]
-	Ordinal0 [0x00681DF1+1842673]
-	BaseThreadInitThunk [0x767A6739+25]
-	RtlGetFullPathName_UEx [0x77488ACF+1215]
-	RtlGetFullPathName_UEx [0x77488A9D+1165]
-</msg>
-<status status="FAIL" starttime="20220724 00:00:48.448" endtime="20220724 00:00:51.289"/>
-</kw>
-<status status="FAIL" starttime="20220724 00:00:42.507" endtime="20220724 00:00:51.292"/>
-</kw>
-<status status="FAIL" starttime="20220724 00:00:42.506" endtime="20220724 00:00:51.294"/>
-</kw>
-<kw name="Então o produto &quot;Console Xbox Series S&quot; deve ser mostrado no carrinho" library="amazon_resources">
-<status status="NOT RUN" starttime="20220724 00:00:51.327" endtime="20220724 00:00:51.327"/>
-</kw>
-<kw name="Fechar o navegador" library="amazon_resources" type="TEARDOWN">
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220724 00:00:51.876" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220724 00:00:51.329" endtime="20220724 00:00:51.876"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220724 00:00:51.876" endtime="20220724 00:00:55.261"/>
-</kw>
-<status status="PASS" starttime="20220724 00:00:51.328" endtime="20220724 00:00:55.261"/>
-</kw>
-<doc>Esse teste verifica a adição de um produto ao carrinho de comparas</doc>
-<tag>adicionar_carrinho</tag>
-<status status="FAIL" starttime="20220724 00:00:27.039" endtime="20220724 00:00:55.264">WebDriverException: Message: unknown error: cannot determine loading status
-from unknown error: unexpected command response
-  (Session info: chrome=103.0.5060.134)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x006D6463+2188387]
-	Ordinal0 [0x0066E461+1762401]
-	Ordinal0 [0x00583D78+802168]
-	Ordinal0 [0x00577210+750096]
-	Ordinal0 [0x0057675A+747354]
-	Ordinal0 [0x00575D3F+744767]
-	Ordinal0 [0x00574C28+740392]
-	Ordinal0 [0x00575228+741928]
-	Ordinal0 [0x0057EF2F+782127]
-	Ordinal0 [0x00589FBB+827323]
-	Ordinal0 [0x0058D310+840464]
-	Ordinal0 [0x005754F6+742646]
-	Ordinal0 [0x00589BF3+826355]
-	Ordinal0 [0x005DCF6D+1167213]
-	Ordinal0 [0x005CC5F6+1099254]
-	Ordinal0 [0x005A6BE0+945120]
-	Ordinal0 [0x005A7AD6+948950]
-	GetHandleVerifier [0x009771F2+2712546]
-	GetHandleVerifier [0x0096886D+2652765]
-	GetHandleVerifier [0x0076002A+520730]
-	GetHandleVerifier [0x0075EE06+516086]
-	Ordinal0 [0x0067468B+1787531]
-	Ordinal0 [0x00678E88+1805960]
-	Ordinal0 [0x00678F75+1806197]
-	Ordinal0 [0x00681DF1+1842673]
-	BaseThreadInitThunk [0x767A6739+25]
-	RtlGetFullPathName_UEx [0x77488ACF+1215]
-	RtlGetFullPathName_UEx [0x77488A9D+1165]
-</status>
+<status status="PASS" starttime="20220728 18:48:54.451" endtime="20220728 18:48:54.465"/>
 </test>
-<doc>Essa suíte testa o site da Amazon.com.br</doc>
-<status status="FAIL" starttime="20220724 00:00:26.590" endtime="20220724 00:00:55.300"/>
+<doc>Exercício IF e FOR</doc>
+<status status="PASS" starttime="20220728 18:48:54.385" endtime="20220728 18:48:54.467"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">adicionar_carrinho</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Amazon Testes Gherkin Bdd">Amazon Testes Gherkin Bdd</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Laços">Laços</stat>
 </suite>
 </statistics>
 <errors>
